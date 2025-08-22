@@ -21,68 +21,94 @@ The repository contains Python scripts for hashing and cracking demos, example h
 
 ## 📦 Project Structure
 
+```bash
 password-cracking-lab/
-
 │
-
-
 ├── scripts/
-
-
-│ ├── password_demo.py # Hashing & salting demo + brute-force simulation
-
-
-│ ├── john_demo.py # John the Ripper demonstration
-
-
-│ ├── hashcat_demo.py # Hashcat demonstration
-
-
+│   ├── password_demo.py
+│   ├── john_demo.py        
+│   ├── hashcat_demo.py     
 │
+├── wordlists/
+│   └── common_passwords.txt  # Example wordlist (with rockyou.txt helper)
+│
+├── install_lab.sh          
+├── README.md               
+└── example_hashes.txt      
+```
 
+⚙️ Installation & Setup
 
-├── install_lab.sh # Installs dependencies and environment setup
+Run the following commands in Kali Linux / Ubuntu:
 
+```bash
+# Make installer executable
+chmod +x install_lab.sh  
 
-├── README.md # This file
+# Run setup
+./install_lab.sh  
 
+# Navigate to project
+cd ~/password-cracking-lab  
 
-└── (wordlists, example hashes, etc.)
-
-
-Key components:
-
-install_lab.sh – one-step setup for Kali/Ubuntu (Python 3, Hashcat, John, bcrypt, sample data).
-
-scripts/password_demo.py – hashing & salting tutorial (MD5, SHA-256, bcrypt) with timing and cracking demos.
-
-scripts/john_demo.py – Python-driven John-the-Ripper dictionary/brute-force showcase.
-
-scripts/hashcat_demo.py – Python-driven Hashcat benchmark, dictionary, brute-force, and hybrid attacks.
-
-wordlists/common_passwords.txt + rockyou extraction helper.
-
-COMMANDS TO RUN THE PROJECT
-
-
-chmod +x install_lab.sh
-
-
-./install_lab.sh        # install & build lab
-
-
-cd ~/password-cracking-lab
-
-
+# Activate virtual environment
 source venv/bin/activate
+```
 
 
-python3 scripts/password_demo.py   # hashing walkthrough
 
 
-python3 scripts/john_demo.py       # John demo
 
 
-python3 scripts/hashcat_demo.py    # Hashcat demo
+## 📘 Learning Outcomes
+
+By completing this lab, you will:
+
+✔ Understand password hashing & salting techniques
+
+✔ Learn brute-force and dictionary attack fundamentals
+
+✔ Use Python to implement simple cracking simulations
+
+✔ Run real-world cracking tools (John the Ripper, Hashcat)
+
+## ✅ Requirements
+
+- Python 3.8+
+- Kali Linux / Ubuntu
+- Hashcat
+- John the Ripper 
+- bcrypt library 
+
+
+---
+
+
+
+## 📄 License
+
+MIT License. Free to use and extend with credit.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
